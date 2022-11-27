@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+:root {
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+body {
+    background-color: var(--Cream);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+}
+.container img.mob {
+    display: none;
+}
+main {
+    display: flex;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+.container img.comp {
+    width: 320px;
+    border-bottom-left-radius: 0.5rem;
+    height: 100%;
+}
+.box {
+    background-color: var(--White);
+    width: 330px;
+    height: fit-content;
+    padding: 2.5rem;
+}
+.box span.word {
+    text-transform: uppercase;
+    color: var(--Dark-grayish-blue);
+    letter-spacing: 6px;
+    font-size: 15px;
+}
+.box h1 {
+    width: 200px;
+    margin: 1.5rem 0 1.5rem 0;
+    color: var(--Very-dark-blue);
+}
+.box p {
+    color: var(--Dark-grayish-blue);
+    width: 220px;
+    line-height: 1.5;
+}
+.prices {
+    margin: 2rem 0 2rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+.prices span:first-child {
+    font-size: 35px;
+    margin-top: -0.5rem;
+    color: var(--Dark-cyan);
+    font-weight: 600;
+}
+.prices span:last-child { 
+    width: 80px;
+    font-weight: 400;
+    text-decoration: line-through;
+}
+button {
+    border: none;
+    background-color: var(--Dark-cyan);
+    color: var(--White);
+    padding: 18px;
+    width: 250px;
+    border-radius: 0.5rem;
+    transition: 0.2s;;
+}
+button:hover {
+    background-color: var(--Very-dark-blue);
+    cursor: pointer;
+}
+@media (max-width: 767px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .container img.comp {
+        display: none;
+    }
+    .container img.mob {
+        display: block;
+        width: 100%;
+    }
+    .box {
+        width: 100%;
+    }
+    .box h1 {
+        width: 300px;
+    }
+    .box p {
+        width: 250px;
+    }
+    .prices span:last-child {
+        margin-right: 5rem;
+    }
+    button {
+        width: 100%;
+    }
+}
